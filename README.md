@@ -1,17 +1,17 @@
-# 🏧 Cajero Automático - Sistema de Gestión Bancaria
+# Cajero Automático - Sistema de Gestión Bancaria
 
 Sistema de cajero automático desarrollado con **TypeScript** siguiendo principios de **Clean Architecture**, **Domain-Driven Design** y **Programación Funcional**.
 
-## ✨ Características
+## Características
 
-- 💰 **Operaciones bancarias**: Consulta de saldo, depósitos y retiros
-- 🔐 **Autenticación por roles**: Clientes y Administradores
-- 🏪 **Gestión de cajero**: Recarga de efectivo (solo admin)
-- 🧪 **Cobertura de pruebas**: 20 tests unitarios e integración
-- 📐 **Arquitectura limpia**: Domain, Application e Infrastructure separadas
-- 🎯 **Manejo funcional de errores**: Sin excepciones, usando `Result<T,E>`
+- **Operaciones bancarias**: Consulta de saldo, depósitos y retiros
+- **Autenticación por roles**: Clientes y Administradores
+- **Gestión de cajero**: Recarga de efectivo (solo admin)
+- **Cobertura de pruebas**: 20 tests unitarios e integración
+- **Arquitectura limpia**: Domain, Application e Infrastructure separadas
+- **Manejo funcional de errores**: Sin excepciones, usando `Result<T,E>`
 
-## 🚀 Tecnologías
+## Tecnologías
 
 | Tecnología | Propósito |
 |------------|-----------|
@@ -21,7 +21,7 @@ Sistema de cajero automático desarrollado con **TypeScript** siguiendo principi
 | tsx | Ejecución de TypeScript sin compilación |
 | Node.js 18+ | Runtime |
 
-## 📦 Instalación
+## Instalación
 
 ```bash
 # Clonar repositorio
@@ -32,7 +32,7 @@ cd banco-
 npm install
 ```
 
-## 🎮 Uso
+## Uso
 
 ### Iniciar aplicación (modo desarrollo)
 ```bash
@@ -44,7 +44,7 @@ npm run dev
 2. **Menú Cliente**: Consultar saldo, depositar, retirar dinero
 3. **Menú Administrador**: Acceder con ID que inicie con `admin-` para recargar el cajero
 
-## 🧪 Testing
+## Testing
 
 ```bash
 # Ejecutar todos los tests
@@ -58,11 +58,11 @@ npm run coverage
 ```
 
 ### Tests incluidos
-- ✅ **Domain**: Entidades `CuentaBancaria`, `Cajero`, Value Object `Dinero`
-- ✅ **Application**: Casos de uso con mocks
-- ✅ **Integration**: Flujo completo depósito-retiro
+- **Domain**: Entidades `CuentaBancaria`, `Cajero`, Value Object `Dinero`
+- **Application**: Casos de uso con mocks
+- **Integration**: Flujo completo depósito-retiro
 
-## 🏗️ Arquitectura
+## Arquitectura
 
 ```
 src/
@@ -85,7 +85,7 @@ src/
 - **Single Responsibility**: Cada clase tiene una razón de cambiar
 - **Railway-oriented programming**: Errores como valores, no excepciones
 
-## 📝 Scripts disponibles
+## Scripts disponibles
 
 | Script | Descripción |
 |--------|-------------|
@@ -96,7 +96,7 @@ src/
 | `npm run format` | Formatear código con Prettier |
 | `npm run typecheck` | Verificación de tipos |
 
-## 🔧 Calidad de código
+## Calidad de código
 
 El proyecto mantiene estándares estrictos:
 - **ESLint** con reglas estrictas de TypeScript
@@ -104,10 +104,12 @@ El proyecto mantiene estándares estrictos:
 - **Cobertura de tests** en toda la lógica de negocio
 - **Sin archivos JavaScript**: Código 100% TypeScript
 
-## 📄 Licencia
+## Licencia
 
 ISC
 
 ---
 
-Desarrollado con 💙 siguiendo las mejores prácticas de TypeScript y Clean Architecture.
+**Autor**: Jhon Stiven Zuluaga Jaramillo
+
+Desarrollado siguiendo las mejores prácticas de TypeScript y Clean Architecture.
