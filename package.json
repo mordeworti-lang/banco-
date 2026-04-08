@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "Proyecto TypeScript moderno con mejores prácticas",
   "type": "module",
-    "scripts": {
+  "scripts": {
     "dev": "tsx src/index.ts",
     "dev:watch": "tsx watch src/index.ts",
     "build": "tsc",
@@ -11,7 +11,7 @@
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
     "coverage": "vitest run --coverage",
-    "lint": "eslint . --fix",
+    "lint": "cross-env NODE_OPTIONS=--import=tsx eslint . --fix",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit"
@@ -27,6 +27,7 @@
     "@eslint/js": "^10.0.1",
     "@types/node": "^25.5.2",
     "@vitest/ui": "^4.1.2",
+    "cross-env": "^10.1.0",
     "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
     "jiti": "^2.6.1",
