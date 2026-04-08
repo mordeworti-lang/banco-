@@ -3,10 +3,10 @@
 // Por que: Orquesta repositorio y presentador siguiendo SRP.
 // Para que: Controller lo invoca tras parsear input del usuario.
 
-import type { CuentaRepository } from '../../domain/repositories/cuenta-repository.js';
-import type { Presenter } from '../ports/output/presenter.js';
-import type { ConsultarSaldoInput } from '../ports/input/consultar-saldo-input.js';
-import { accountNotFound } from '../../domain/errors/domain-error.js';
+import type { CuentaRepository } from '../../domain/repositories/cuenta-repository';
+import type { Presenter } from '../ports/output/presenter';
+import type { ConsultarSaldoInput } from '../ports/input/consultar-saldo-input';
+import { accountNotFound } from '../../domain/errors/domain-error';
 
 export class ConsultarSaldoUseCase {
   constructor(

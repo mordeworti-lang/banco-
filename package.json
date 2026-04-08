@@ -3,22 +3,10 @@
   "version": "1.0.0",
   "description": "Proyecto TypeScript moderno con mejores prácticas",
   "type": "module",
-  "main": "./dist/index.cjs",
-  "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
-  "exports": {
-    ".": {
-      "import": "./dist/index.mjs",
-      "require": "./dist/index.cjs",
-      "types": "./dist/index.d.ts"
-    }
-  },
-  "files": ["dist"],
-  "scripts": {
+    "scripts": {
     "dev": "tsx src/index.ts",
     "dev:watch": "tsx watch src/index.ts",
-    "build": "tsc && vite build",
-    "preview": "vite preview",
+    "build": "tsc",
     "test": "vitest run",
     "test:watch": "vitest",
     "test:ui": "vitest --ui",
@@ -28,7 +16,11 @@
     "format:check": "prettier --check .",
     "typecheck": "tsc --noEmit"
   },
-  "keywords": ["typescript", "modern", "esm"],
+  "keywords": [
+    "typescript",
+    "modern",
+    "esm"
+  ],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -37,11 +29,11 @@
     "@vitest/ui": "^4.1.2",
     "eslint": "^10.2.0",
     "eslint-config-prettier": "^10.1.8",
+    "jiti": "^2.6.1",
     "prettier": "^3.8.1",
     "tsx": "^4.21.0",
     "typescript": "^6.0.2",
     "typescript-eslint": "^8.58.0",
-    "vite": "^8.0.5",
     "vitest": "^4.1.2"
   }
 }

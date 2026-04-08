@@ -11,7 +11,7 @@ export const isPositiveNumber = (value: number): boolean => {
   return typeof value === 'number' && !Number.isNaN(value) && Number.isFinite(value) && value > 0;
 };
 
-export const hasMinLength = <T extends { length: number }>(value: T, minLength: number): boolean => {
+export const hasMinLength = (value: { length: number }, minLength: number): boolean => {
   return value.length >= minLength;
 };
 

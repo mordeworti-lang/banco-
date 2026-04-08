@@ -3,10 +3,10 @@
 // Por que: Coordina verificacion de cuenta, operacion de dominio, persistencia, feedback.
 // Para que: Flujo completo de deposito con manejo de errores en cada paso.
 
-import type { CuentaRepository } from '../../domain/repositories/cuenta-repository.js';
-import type { Presenter } from '../ports/output/presenter.js';
-import type { DepositarInput } from '../ports/input/depositar-input.js';
-import { accountNotFound } from '../../domain/errors/domain-error.js';
+import type { CuentaRepository } from '../../domain/repositories/cuenta-repository';
+import type { Presenter } from '../ports/output/presenter';
+import type { DepositarInput } from '../ports/input/depositar-input';
+import { accountNotFound } from '../../domain/errors/domain-error';
 
 export class DepositarDineroUseCase {
   constructor(

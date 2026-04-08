@@ -3,8 +3,8 @@
 // Por que: Application no debe saber si es console, web, o API REST.
 // Para que: Infrastructure implementa esto con tecnologia especifica (console.log, res.json, etc).
 
-import type { Dinero } from '../../../domain/value-objects/dinero.js';
-import type { DomainError } from '../../../domain/errors/domain-error.js';
+import type { Dinero } from '../../../domain/value-objects/dinero';
+import type { DomainError } from '../../../domain/errors/domain-error';
 
 export type Presenter = {
   mostrarSaldo(cuentaId: string, saldo: Dinero): void;

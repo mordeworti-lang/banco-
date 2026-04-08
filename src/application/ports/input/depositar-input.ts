@@ -3,10 +3,10 @@
 // Por que: Agregar tipos fuertes a parametros de entrada, validar antes de tocar dominio.
 // Para que: Validar monto positivo y cuentaId antes de instanciar Dinero o buscar entidad.
 
-import { ok, err, type Result } from '../../../shared/result.js';
-import { hasMinLength, isPositiveNumber } from '../../../shared/validators.js';
-import { invalidAmount, accountNotFound, type DomainError } from '../../../domain/errors/domain-error.js';
-import { createDinero, type Dinero, type Moneda } from '../../../domain/value-objects/dinero.js';
+import { ok, err, type Result } from '../../../shared/result';
+import { hasMinLength, isPositiveNumber } from '../../../shared/validators';
+import { invalidAmount, accountNotFound, type DomainError } from '../../../domain/errors/domain-error';
+import { createDinero, type Dinero, type Moneda } from '../../../domain/value-objects/dinero';
 
 export type DepositarInput = {
   cuentaId: string;

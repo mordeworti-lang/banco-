@@ -3,12 +3,12 @@
 // Por que: Es el mas complejo, requiere dos validaciones (cuenta saldo, cajero efectivo).
 // Para que: Transaccion segura que no deja inconsistencias (si cajero no tiene, no se debita cuenta).
 
-import type { CuentaRepository } from '../../domain/repositories/cuenta-repository.js';
-import type { CajeroRepository } from '../../domain/repositories/cajero-repository.js';
-import type { Presenter } from '../ports/output/presenter.js';
-import type { RetirarInput } from '../ports/input/retirar-input.js';
-import { createDinero } from '../../domain/value-objects/dinero.js';
-import { accountNotFound } from '../../domain/errors/domain-error.js';
+import type { CuentaRepository } from '../../domain/repositories/cuenta-repository';
+import type { CajeroRepository } from '../../domain/repositories/cajero-repository';
+import type { Presenter } from '../ports/output/presenter';
+import type { RetirarInput } from '../ports/input/retirar-input';
+import { createDinero } from '../../domain/value-objects/dinero';
+import { accountNotFound } from '../../domain/errors/domain-error';
 
 export class RetirarDineroUseCase {
   constructor(

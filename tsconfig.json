@@ -37,15 +37,10 @@
     // "emitDecoratorMetadata": true,
 
     // Paths
-    "ignoreDeprecations": "5.0",
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"],
-      "@core/*": ["./src/core/*"],
-      "@utils/*": ["./src/utils/*"],
-      "@types/*": ["./src/types/*"]
+      "@/*": ["./src/*"]
     }
   },
-  "include": ["src/**/*", "tests/**/*"],
+  "include": ["src/**/*", "tests/**/*", "eslint.config.ts", "eslint.config.mjs", "vitest.config.ts"],
   "exclude": ["node_modules", "dist"]
 }

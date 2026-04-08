@@ -5,17 +5,15 @@
 
 import * as readline from 'node:readline/promises';
 import { stdin as input, stdout as output } from 'node:process';
-import type { Dinero } from '../../domain/value-objects/dinero.js';
-import type { DomainError } from '../../domain/errors/domain-error.js';
-import type { Presenter } from '../../application/ports/output/presenter.js';
+import type { Dinero } from '../../domain/value-objects/dinero';
+import type { DomainError } from '../../domain/errors/domain-error';
+import type { Presenter } from '../../application/ports/output/presenter';
 
 export class ConsolePresenter implements Presenter {
   private rl: readline.Interface | null = null;
 
   private getInterface(): readline.Interface {
-    if (!this.rl) {
-      this.rl = readline.createInterface({ input, output });
-    }
+    this.rl ??= readline.createInterface({ input, output });
     return this.rl;
   }
 
@@ -57,7 +55,7 @@ export class ConsolePresenter implements Presenter {
 
   async confirmarRetiroDisponible(disponible: number, solicitado: number): Promise<boolean> {
     const respuesta = await this.getInterface().question(
-      `El cajero solo tiene ${disponible} disponible. Desea retirar ${disponible} en vez de ${solicitado}? (s/n): `
+      `El cajero solo tiene ${String(disponible)} disponible. Desea retirar ${String(disponible)} en vez de ${String(solicitado)}? (s/n): `
     );
     return respuesta.trim().toLowerCase() === 's' || respuesta.trim().toLowerCase() === 'si';
   }

@@ -3,9 +3,9 @@
 // Por que: Domain define que necesita, Infrastructure implementa como (SQL, NoSQL, memoria).
 // Para que: Inversion de dependencias, testear use cases con repositorio en memoria.
 
-import type { CuentaBancaria } from '../entities/cuenta-bancaria.js';
-import type { Result } from '../../shared/result.js';
-import type { DomainError } from '../errors/domain-error.js';
+import type { CuentaBancaria } from '../entities/cuenta-bancaria';
+import type { Result } from '../../shared/result';
+import type { DomainError } from '../errors/domain-error';
 
 export type CuentaRepository = {
   buscarPorId(id: string): Promise<Result<CuentaBancaria | null, DomainError>>;

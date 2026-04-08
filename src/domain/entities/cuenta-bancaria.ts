@@ -3,10 +3,10 @@
 // Por que: Encapsula estado y comportamiento, protege invariantes (saldo >= 0).
 // Para que: Application orquesta, pero la logica de negocio pura vive aqui.
 
-import { add, subtract, type Dinero, isGreaterThan } from '../value-objects/dinero.js';
-import { insufficientFunds, type DomainError } from '../errors/domain-error.js';
-import { isNonNullish } from '../../shared/validators.js';
-import { ok, err, type Result } from '../../shared/result.js';
+import { add, subtract, type Dinero, isGreaterThan } from '../value-objects/dinero';
+import { insufficientFunds, type DomainError } from '../errors/domain-error';
+import { isNonNullish } from '../../shared/validators';
+import { ok, err, type Result } from '../../shared/result';
 
 export class CuentaBancaria {
   private _saldo: Dinero;

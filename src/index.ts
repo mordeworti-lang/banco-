@@ -3,16 +3,16 @@
 // Por que: Composition Root - aqui se ensamblan todas las piezas, se inyectan dependencias.
 // Para que: Iniciar el cajero desde consola con: npm run dev
 
-import { InMemoryCuentaRepository } from './infrastructure/persistence/in-memory-cuenta-repository.js';
-import { InMemoryCajeroRepository } from './infrastructure/persistence/in-memory-cajero-repository.js';
-import { ConsolePresenter } from './infrastructure/console/console-presenter.js';
-import { MenuController } from './infrastructure/console/menu-controller.js';
-import { ConsultarSaldoUseCase } from './application/use-cases/consultar-saldo.js';
-import { DepositarDineroUseCase } from './application/use-cases/depositar-dinero.js';
-import { RetirarDineroUseCase } from './application/use-cases/retirar-dinero.js';
-import { RecargarCajeroUseCase } from './application/use-cases/recargar-cajero.js';
-import { CuentaBancaria } from './domain/entities/cuenta-bancaria.js';
-import { createDinero } from './domain/value-objects/dinero.js';
+import { InMemoryCuentaRepository } from './infrastructure/persistence/in-memory-cuenta-repository';
+import { InMemoryCajeroRepository } from './infrastructure/persistence/in-memory-cajero-repository';
+import { ConsolePresenter } from './infrastructure/console/console-presenter';
+import { MenuController } from './infrastructure/console/menu-controller';
+import { ConsultarSaldoUseCase } from './application/use-cases/consultar-saldo';
+import { DepositarDineroUseCase } from './application/use-cases/depositar-dinero';
+import { RetirarDineroUseCase } from './application/use-cases/retirar-dinero';
+import { RecargarCajeroUseCase } from './application/use-cases/recargar-cajero';
+import { CuentaBancaria } from './domain/entities/cuenta-bancaria';
+import { createDinero } from './domain/value-objects/dinero';
 
 const main = async (): Promise<void> => {
   const cuentaRepo = new InMemoryCuentaRepository();
@@ -43,4 +43,4 @@ const bootstrap = async (): Promise<void> => {
   }
 };
 
-bootstrap();
+void bootstrap();

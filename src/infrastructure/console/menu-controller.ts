@@ -3,15 +3,15 @@
 // Por que: Separar flujos segun tipo de usuario, no preguntar ID en cada accion.
 // Para que: UX mas limpia, admin puede recargar cajero.
 
-import type { Presenter } from '../../application/ports/output/presenter.js';
-import type { ConsultarSaldoUseCase } from '../../application/use-cases/consultar-saldo.js';
-import type { DepositarDineroUseCase } from '../../application/use-cases/depositar-dinero.js';
-import type { RetirarDineroUseCase } from '../../application/use-cases/retirar-dinero.js';
-import type { RecargarCajeroUseCase } from '../../application/use-cases/recargar-cajero.js';
-import { createConsultarSaldoInput } from '../../application/ports/input/consultar-saldo-input.js';
-import { createDepositarInput } from '../../application/ports/input/depositar-input.js';
-import { createRetirarInput } from '../../application/ports/input/retirar-input.js';
-import { createDinero, type Moneda } from '../../domain/value-objects/dinero.js';
+import type { Presenter } from '../../application/ports/output/presenter';
+import type { ConsultarSaldoUseCase } from '../../application/use-cases/consultar-saldo';
+import type { DepositarDineroUseCase } from '../../application/use-cases/depositar-dinero';
+import type { RetirarDineroUseCase } from '../../application/use-cases/retirar-dinero';
+import type { RecargarCajeroUseCase } from '../../application/use-cases/recargar-cajero';
+import { createConsultarSaldoInput } from '../../application/ports/input/consultar-saldo-input';
+import { createDepositarInput } from '../../application/ports/input/depositar-input';
+import { createRetirarInput } from '../../application/ports/input/retirar-input';
+import { createDinero, type Moneda } from '../../domain/value-objects/dinero';
 
 export class MenuController {
   constructor(

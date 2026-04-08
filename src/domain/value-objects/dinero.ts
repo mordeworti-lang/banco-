@@ -3,9 +3,9 @@
 // Por que: Evitar primitive obsession, encapsular logica de moneda y validacion.
 // Para que: CuentaBancaria y Cajero trabajan con Dinero, no number suelto.
 
-import { ok, err, type Result } from '../../shared/result.js';
-import { isPositiveNumber } from '../../shared/validators.js';
-import { invalidAmount, type DomainError } from '../errors/domain-error.js';
+import { ok, err, type Result } from '../../shared/result';
+import { isPositiveNumber } from '../../shared/validators';
+import { invalidAmount, type DomainError } from '../errors/domain-error';
 
 export type Moneda = 'USD' | 'EUR' | 'PEN';
 

@@ -3,9 +3,9 @@
 // Por que: Mantener el cajero operativo cuando se agota el efectivo.
 // Para que: Administrador pueda agregar billetes al cajero.
 
-import type { CajeroRepository } from '../../domain/repositories/cajero-repository.js';
-import type { Presenter } from '../ports/output/presenter.js';
-import type { Dinero } from '../../domain/value-objects/dinero.js';
+import type { CajeroRepository } from '../../domain/repositories/cajero-repository';
+import type { Presenter } from '../ports/output/presenter';
+import type { Dinero } from '../../domain/value-objects/dinero';
 
 export type RecargarCajeroInput = {
   monto: Dinero;
@@ -34,6 +34,6 @@ export class RecargarCajeroUseCase {
       this.presenter.mostrarError(guardarResult.error);
       return;
     }
-    console.log(`Cajero recargado. Nuevo disponible: ${cajero.efectivoDisponible.cantidad} ${cajero.efectivoDisponible.moneda}`);
+    console.log(`Cajero recargado. Nuevo disponible: ${String(cajero.efectivoDisponible.cantidad)} ${cajero.efectivoDisponible.moneda}`);
   }
 }

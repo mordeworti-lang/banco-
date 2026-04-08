@@ -3,10 +3,10 @@
 // Por que: Similar a depositar pero con validaciones adicionales (cajero debe tener fondos).
 // Para que: Pre-validar antes de cargar entidades del repositorio.
 
-import { ok, err, type Result } from '../../../shared/result.js';
-import { hasMinLength, isPositiveNumber } from '../../../shared/validators.js';
-import { invalidAmount, accountNotFound, type DomainError } from '../../../domain/errors/domain-error.js';
-import { createDinero, type Dinero, type Moneda } from '../../../domain/value-objects/dinero.js';
+import { ok, err, type Result } from '../../../shared/result';
+import { hasMinLength, isPositiveNumber } from '../../../shared/validators';
+import { invalidAmount, accountNotFound, type DomainError } from '../../../domain/errors/domain-error';
+import { createDinero, type Dinero, type Moneda } from '../../../domain/value-objects/dinero';
 
 export type RetirarInput = {
   cuentaId: string;

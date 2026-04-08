@@ -3,9 +3,9 @@
 // Por que: Desacoplar interfaz de usuario de logica de aplicacion.
 // Para que: ConsoleAdapter construye este DTO desde input del usuario y lo pasa al use case.
 
-import { ok, err, type Result } from '../../../shared/result.js';
-import { hasMinLength } from '../../../shared/validators.js';
-import { accountNotFound, type DomainError } from '../../../domain/errors/domain-error.js';
+import { ok, err, type Result } from '../../../shared/result';
+import { hasMinLength } from '../../../shared/validators';
+import { accountNotFound, type DomainError } from '../../../domain/errors/domain-error';
 
 export type ConsultarSaldoInput = {
   cuentaId: string;

@@ -3,9 +3,9 @@
 // Por que: El cajero es independiente de las cuentas, tiene su propio estado (efectivo).
 // Para que: Validar que hay billetes suficientes antes de dispensar, track de disponibilidad.
 
-import { add, subtract, type Dinero } from '../value-objects/dinero.js';
-import { atmInsufficientFunds, type DomainError } from '../errors/domain-error.js';
-import { ok, err, type Result } from '../../shared/result.js';
+import { add, subtract, type Dinero } from '../value-objects/dinero';
+import { atmInsufficientFunds, type DomainError } from '../errors/domain-error';
+import { ok, err, type Result } from '../../shared/result';
 
 export class Cajero {
   private _efectivoDisponible: Dinero;
