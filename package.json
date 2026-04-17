@@ -1,4 +1,5 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "nueva-carpeta",
   "version": "1.0.0",
   "description": "Proyecto TypeScript moderno con mejores prácticas",
